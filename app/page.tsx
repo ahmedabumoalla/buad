@@ -34,16 +34,8 @@ export default function Home() {
           boxShadow: "0 40px 120px rgba(0,0,0,0.15)",
         }}
       >
-        {/* الشعار */}
-        <div style={{ marginBottom: "32px" }}>
-          <Image
-            src="/logo-theatre-ai.png"
-            alt="Theatre AI Logo"
-            width={200}
-            height={200}
-            priority
-          />
-        </div>
+       
+        
 
         {/* العنوان */}
         <h1
