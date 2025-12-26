@@ -30,7 +30,6 @@ export default function Analyze() {
           boxShadow: "0 40px 120px rgba(0,0,0,0.15)",
         }}
       >
-        {/* العنوان */}
         <h1
           style={{
             fontSize: "26px",
@@ -43,7 +42,6 @@ export default function Analyze() {
           تحليل النص المسرحي
         </h1>
 
-        {/* الوصف */}
         <p
           style={{
             fontSize: "15px",
@@ -59,7 +57,6 @@ export default function Analyze() {
           لاتخاذ قرارات فنية وتسويقية أدق
         </p>
 
-        {/* صندوق الرفع */}
         <UploadBox />
       </section>
     </main>

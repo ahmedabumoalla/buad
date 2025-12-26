@@ -35,7 +35,6 @@ export default function UploadBox() {
           gap: "22px",
         }}
       >
-        {/* مربع النص */}
         <textarea
           placeholder="الصق النص المسرحي هنا…"
           value={text}
@@ -56,7 +55,6 @@ export default function UploadBox() {
           }}
         />
 
-        {/* زر التحليل */}
         <div
           onClick={!loading ? analyze : undefined}
           style={{
@@ -74,60 +72,11 @@ export default function UploadBox() {
             boxShadow: loading
               ? "none"
               : "0 18px 50px rgba(0,50,67,0.35)",
-            transition: "all 0.2s ease",
           }}
         >
-          {loading ? (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "12px",
-              }}
-            >
-              <span
-                style={{
-                  width: "16px",
-                  height: "16px",
-                  border: "3px solid #ffffff",
-                  borderTopColor: "transparent",
-                  borderRadius: "50%",
-                  animation: "spin 1s linear infinite",
-                }}
-              />
-              <span
-                style={{
-                  color: "#ffffff",
-                  fontSize: "15px",
-                  fontWeight: 700,
-                }}
-              >
-                جارٍ تحليل النص…
-              </span>
-            </div>
-          ) : (
-            <span
-              style={{
-                color: "#ffffffff",
-                fontSize: "16px",
-                fontWeight: 800,
-                letterSpacing: "0.3px",
-              }}
-            >
-              حلّل النص بالذكاء الاصطناعي
-            </span>
-          )}
+          {loading ? "جارٍ تحليل النص…" : "حلّل النص بالذكاء الاصطناعي"}
         </div>
       </div>
-
-      {/* حركة الدوران */}
-      <style jsx>{`
-        @keyframes spin {
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      `}</style>
     </>
   );
 }

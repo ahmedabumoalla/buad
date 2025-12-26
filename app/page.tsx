@@ -14,7 +14,7 @@ export default function Home() {
           radial-gradient(circle at 20% 20%, #31bbb8 0%, transparent 35%),
           radial-gradient(circle at 80% 30%, #db1e3c 0%, transparent 40%),
           radial-gradient(circle at 50% 80%, #f6922a 0%, transparent 45%),
-          linear-gradient(180deg, #ffffff 0%, #ffffffff 100%)
+          linear-gradient(180deg, #7e1f1fff 0%, #ffffffff 100%)
         `,
         display: "flex",
         alignItems: "center",

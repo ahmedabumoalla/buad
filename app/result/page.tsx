@@ -61,7 +61,6 @@ export default function ResultPage() {
           boxShadow: "0 40px 120px rgba(0,0,0,0.15)",
         }}
       >
-        {/* العنوان */}
         <div style={{ textAlign: "center", marginBottom: "48px" }}>
           <h1
             style={{
@@ -87,7 +86,6 @@ export default function ResultPage() {
           </p>
         </div>
 
-        {/* النتائج */}
         <div
           style={{
             display: "grid",
@@ -95,25 +93,21 @@ export default function ResultPage() {
             gap: "28px",
           }}
         >
-          {/* التحليل */}
           <ResultCard
             title="🧠 التحليل الفني للنص"
             content={data.analysis}
           />
 
-          {/* الجمهور */}
           <ResultCard
             title="🎯 الجمهور المستهدف"
             content={data.audience}
           />
 
-          {/* دور العرض */}
           <ResultCard
             title="🏛️ دور العرض المناسبة"
             content={data.venues}
           />
 
-          {/* Storyboard */}
           <div
             style={{
               padding: "32px",
@@ -144,19 +138,7 @@ export default function ResultPage() {
               }}
             >
               {data.storyboard?.replace(/^#+\s*/gm, "")}
-
             </div>
-
-            <p
-              style={{
-                marginTop: "20px",
-                fontSize: "12px",
-                color: "#6b7280",
-              }}
-            >
-              * هذا التصور الإخراجي يهدف لدعم التخطيط البصري
-              ولا يُعد بديلاً عن الرؤية الإبداعية للمخرج
-            </p>
           </div>
         </div>
       </section>
@@ -164,7 +146,6 @@ export default function ResultPage() {
   );
 }
 
-/* كرت موحد */
 function ResultCard({
   title,
   content,
@@ -202,7 +183,10 @@ function ResultCard({
           whiteSpace: "pre-line",
         }}
       >
-        {content?.replace(/^#+\s*/gm, "")}
+        {content
+  ?.replace(/^#+\s*/gm, "")
+  .replace(/\*\*/g, "")
+}
       </p>
     </div>
   );
