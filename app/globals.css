@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --theatre-bg: #0b0b0f;
+  --theatre-purple: #5b2d8b;
+  --theatre-gold: #c9a24d;
+  --theatre-muted: #9ca3af;
+}
+
+body {
+  font-family: var(--font-cairo), sans-serif;
+}
+
+.theatre-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+.gold-text {
+  color: var(--theatre-gold);
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+a {
+  all: unset;
+  display: inline-flex;
+  cursor: pointer;
+}
